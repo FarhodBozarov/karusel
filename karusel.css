@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.carousel {
+    overflow-x: hidden;
+}
+
+.innerWrapper {
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+}
+.innerWrapper img {
+    margin: 0 100px;
+    transition: 0.5s ease;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper button {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    z-index: 2 !important;
+    appearance: none;
+    border: none;
+    border-radius: 32px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 30px 0 #1e1e1e22;
+}
+
+.wrapper button:active {
+    background-color: blueviolet;
+}
+
+.wrapper button:first-child {
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.wrapper button:nth-child(2) {
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+}
